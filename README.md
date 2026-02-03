@@ -1,62 +1,64 @@
-# HealthCare-Analytics-Dashboard
-This dashboard will give Hospital Staff detail information about what is the issue and what all steps they should be taking to solve those issue with the help of Data Analytics. 
+# Hospital Emergency Room - Data Analysis
 
+**By Shambhavi Jha**
 
-# Project Title
+---
 
-**A brief description of this project**
+## Why I Made This
 
-This comprehensive Healthcare Analytics Dashboard is designed to provide healthcare professionals and administrators with insights into patient visits, treatment satisfaction, waiting times, and demographic distributions. The dashboard helps to understand patient flow, identify areas for improvement, and enhance overall patient care.
+Honestly, this project started because I was curious. I kept reading about how overcrowded emergency rooms are becoming a real problem - long wait times, frustrated patients, overworked staff. And I thought, what if we could actually look at the data and find patterns that might help?
 
-Using **Power BI, DAX Functions, and Power Query**, organizations can visualize key healthcare metrics such as Total patient visits, average satisfaction, average waiting time, age group distribution, yearly trends, monthly visits, etc. They can also analyze historical data to identify trends, optimize operations, and make informed decisions to improve efficiency and reduce waiting time, and provide the best facilities to the patients.
+I got my hands on this ER dataset and decided to dig in. What started as a weekend exploration turned into a full analysis because the more I looked, the more interesting things I found.
 
-# Healthcare Analytics Dashboard
+## What This Project Does
 
-### Dashboard Link : 
+This is an exploratory data analysis (EDA) of hospital emergency room visits. I wanted to understand:
 
-**https://app.powerbi.com/groups/me/reports/6798e87c-11ef-4efd-9241-aee0799e1316/9a213e260d02260ed8b7?experience=power-bi**
+- Who's coming to the ER? (demographics, age groups, etc.)
+- How long are people actually waiting?
+- Are patients satisfied with their experience?
+- Which departments get the most referrals?
+- Are there patterns by time of day or day of week?
 
-## Problem Statement
+## What's Inside
 
-In the fast-paced environment of healthcare, administrators and professionals often struggle to effectively monitor and analyze critical patient metrics such as visit counts, waiting times, treatment satisfaction, and demographic distributions. This lack of comprehensive and easily accessible data can hinder the ability to make informed decisions, optimize patient flow, improve service delivery, and enhance overall patient care.
+- `Healthcare_EDA_Analysis.ipynb` - The main analysis notebook with all visualizations
+- `Hospital ER.csv` - The dataset
+- `dashboard_summary.png` - A quick visual summary (generated after running the notebook)
 
-### Summary for Steps followed 
-1. **Collecting Data**
-**Data Source**: The data for this project was collected from hospital records, patient feedback forms, and internal healthcare systems.
+## Some Interesting Findings
 
-2. **Loading Data into Power BI**
-**Data Import**: The data was imported into Power BI using CSV files and database connections.
+Without spoiling everything in the notebook:
 
-3. **Checking Data in Power Query Editor**
-**Data Review**: In Power Query Editor, we examined the data to understand its structure and identify any inconsistencies.
-Full Data Visibility: Ensured that Power BI could display the entire dataset by adjusting settings as needed.
+- Wait times vary A LOT depending on when you show up
+- There's a pretty clear relationship between wait time and patient satisfaction (no surprise there)
+- Weekends vs weekdays show different patterns
+- Certain age groups have higher admission rates
 
-4. **Data Cleaning**
-**Cleaning Process**: Addressed missing values, corrected errors, and standardized data formats to ensure accuracy and usability.
+## How to Run
 
-5. **Data Manipulation and Measures Creation**
-**Data Manipulation**: We performed various data manipulation tasks to transform and reshape the data as needed. This included filtering, grouping, and aggregating data to prepare it for detailed analysis.
+1. Make sure you have Python with pandas, numpy, matplotlib, and seaborn
+2. Open the Jupyter notebook
+3. Run all cells
 
-**Creating Measures**: Using DAX (Data Analysis Expressions), we created multiple measures to facilitate our analysis. 
+That's it. Nothing fancy.
 
-**Some of the key measures included**:
+## Tech Used
 
-a. Total Visits = COUNT([VisitID]).
+- Python 3
+- Pandas for data wrangling
+- Matplotlib & Seaborn for visualizations
+- Jupyter Notebook
 
-b. Average Waiting Time = AVERAGE([WaitingTime]).
+## Final Thoughts
 
-c. Satisfaction Rate = CALCULATE(AVERAGE([SatisfactionScore]), FILTER([SatisfactionScore] >= 4)).
+This was a learning project for me. I'm not claiming to have solved healthcare or anything like that. But I do think there's value in looking at data like this - even simple patterns can point to areas for improvement.
 
-d. Referral Percentage = DIVIDE(CALCULATE(COUNT([PatientID]), [Referred] = "Yes"), COUNT([PatientID])).
+If you're working on something similar or have suggestions, feel free to reach out!
 
-6. **Data Visualization**
-**Creating Visuals**: Developed various charts and graphs in Power BI to visualize key metrics and insights.
+---
 
-**Visual Enhancements**: Applied themes, colors, and labels to make the dashboard intuitive and visually appealing.
-
-
-# Report Snapshot (Power BI DESKTOP)
-![image](https://github.com/MithilKothari/HealthCare-Analytics-Dashboard/assets/156261969/18b0f9cd-56a4-4c17-890f-fef1e2266bcd)
+*Made with lots of coffee and curiosity*
 
 
 
